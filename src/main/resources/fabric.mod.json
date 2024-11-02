@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "betterbears",
+	"version": "${version}",
+	"name": "BetterBears",
+	"description": "moah bears",
+	"authors": [
+		"AGB556"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC NC",
+	"icon": "assets/betterbears/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.agb.betterbears.BetterBears"
+		],
+		"fabric-datagen": [
+			"org.agb.betterbears.BetterBearsDataGenerator"
+		],
+		"client": [
+		"org.agb.betterbears.BetterBearsClient"
+		]
+	},
+	"mixins": [
+		"betterbears.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
