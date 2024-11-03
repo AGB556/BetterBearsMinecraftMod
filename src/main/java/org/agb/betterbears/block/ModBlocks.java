@@ -15,7 +15,7 @@ import org.agb.betterbears.BetterBears;
 public class ModBlocks {
 
     public static final Block BEAR_TRAP = registerBlock("bear_trap",
-            new Block(AbstractBlock.Settings.create().strength(2f).sounds(BlockSoundGroup.ANVIL)));
+            new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.ANVIL)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
