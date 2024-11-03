@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "betterbears:item/bear_trap"
-  }
+  "parent": "betterbears:block/bear_trap"
 }

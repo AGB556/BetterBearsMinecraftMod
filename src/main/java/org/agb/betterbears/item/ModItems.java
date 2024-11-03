@@ -12,8 +12,6 @@ public class ModItems {
 
     public static final Item SALMON_ON_A_STICK = registerItem("salmon_on_a_stick", new Item(new Item.Settings()));
 
-    public static final Item BEAR_TRAP = registerItem("bear_trap", new Item(new Item.Settings()));
-
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(BetterBears.MOD_ID, name), item);
     }
@@ -23,7 +21,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(SALMON_ON_A_STICK);
-            fabricItemGroupEntries.add(BEAR_TRAP);
+
         });
     }
 }

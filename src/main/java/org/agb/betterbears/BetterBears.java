@@ -2,6 +2,7 @@ package org.agb.betterbears;
 
 import net.fabricmc.api.ModInitializer;
 
+import org.agb.betterbears.block.ModBlocks;
 import org.agb.betterbears.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,6 @@ public class BetterBears implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
-
+		ModBlocks.registerModBlocks();
 	}
 }
