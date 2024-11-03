@@ -2,7 +2,6 @@ package org.agb.betterbears.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -13,6 +12,8 @@ public class ModItems {
 
     public static final Item SALMON_ON_A_STICK = registerItem("salmon_on_a_stick", new Item(new Item.Settings()));
 
+    public static final Item BEAR_TRAP = registerItem("bear_trap", new Item(new Item.Settings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(BetterBears.MOD_ID, name), item);
     }
@@ -20,8 +21,9 @@ public class ModItems {
     public static void registerModItems() {
         BetterBears.LOGGER.info("Registering Mod Items for " + BetterBears.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(SALMON_ON_A_STICK);
+            fabricItemGroupEntries.add(BEAR_TRAP);
         });
     }
 }
